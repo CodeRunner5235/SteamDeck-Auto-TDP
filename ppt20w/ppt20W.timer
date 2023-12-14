@@ -1,0 +1,9 @@
+[Unit]
+Description=Run ppt20W.service every 2 seconds
+
+[Timer]
+OnBootSec=2s
+OnUnitActiveSec=2s
+
+[Install]
+WantedBy=timers.target

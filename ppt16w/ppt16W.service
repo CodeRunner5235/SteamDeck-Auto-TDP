@@ -1,0 +1,9 @@
+[Unit]
+Description=check ppt limit and change to 16w if at 15w
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/ppt16w.sh
+
+[Install]
+WantedBy=default.target
