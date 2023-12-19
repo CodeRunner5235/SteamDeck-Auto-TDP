@@ -61,7 +61,7 @@ A: No good reason if your not overclocking the CPU. Maybe you don't like decky f
 
 Q: I installed but the slider still says 15w
 
-A: The script will set the TDP, but it wont change what the slider says. I don't know how to make it do that. You can check the current mac TDP with
+A: The script will set the TDP, but it wont change what the slider says. I don't know how to make it do that. You can check the current max TDP with
   ```bash
   cat /sys/devices/pci0000:00/0000:00:08.1/0000:04:00.0/hwmon/hwmon5/power1_cap
   ```
