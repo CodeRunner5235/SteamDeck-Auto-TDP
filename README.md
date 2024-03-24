@@ -54,9 +54,9 @@ or reboot to start the service.
 
 Q: Will this work with my deck?
 
-A: It works on my test suit of one LCD deck, so your milage may very
+A: It works on my test suit of one LCD deck, so your milage may very. Tested SteamOS versions 3.5.7 through 3.5.17.
 
-Q: Will this survive an update?
+Q: Will this survive a major update?
 
 A: Nope.
 
