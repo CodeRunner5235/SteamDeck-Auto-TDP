@@ -1,10 +1,10 @@
-# SteamDeck-Auto-TDP
+# SteamDeck Auto TDP
 
 **What is it?**
-A service that allows the TDP to be set higher than 15w automatically while preserving functionality of the existing TDP control slider in the quick access menu **ON LCD DECKS**. I don't know if the OLED uses different files to control the TDP. You can try, but I don't know what will happen.
+A service that allows the TDP to be set higher than 15w automatically while preserving functionality of the existing TDP control slider in the quick access menu **ON LCD DECKS**. I don't know if the OLED uses different files to control the TDP. You can try, but I don't know what will happen, and don’t recommend it.
 
 **How does it work?**
-The service is started automatically at boot and runs every few seconds to check the current max TDP setting. If it is 14w or lower, it does nothing. If it is 16w or higher, it does nothing. If it is exactly 15w, the service will run a script that will set the TDP to your desired max TDP setting. The idea being to still have a higher than stock TDP while being able to use the built in SteamOS TDP control slider. Just set the slider to 15w and it will be set to your desired higher-than-stock TDP automatically. 
+The service is started automatically at boot and runs every few seconds to check the current maximum TDP setting. If it is 14w or lower, it does nothing. If it is 16w or higher, it does nothing. If it is exactly 15w, the service will run a script that will set the TDP to your desired maximum TDP setting. The idea being to still have a higher than stock TDP while being able to use the built in SteamOS TDP control slider. Just set the slider to 15w and it will be set to your desired higher-than-stock TDP automatically. 
 
 *Note*: You must set the TDP higher than 15w in the deck bios for this to work. Otherwise, the bios will lock the TDP to 15w regardless of SteamOS settings.
 
@@ -13,10 +13,10 @@ The main reason I made this was that PowerTools, while an awesome plugin, has a 
 
 
 **What the heck, why the garbage workaround!?**
-Yea, yea, I hear you linux warrior, I know there are definitely better ( and simpler ) ways than my service that runs a script every few seconds. My linux expertise isn't top notch, so if you have a better way, please do share.
+Yea, yea, I hear you Linux warrior, I know there are better, simpler, and more graceful ways than my service that runs a script every few seconds. My Linux expertise isn't top notch, so if you have a better way, please do share.
 
 **Installing**
-To install this on your deck, choose your desired TDP folder. I'm going to assume 20 so make sure to change your number if necessary.
+To install this on your deck, choose your desired TDP folder (or make your own). I'm going to assume 20 so make sure to change your number if necessary.
 
 
 Installing the files
@@ -43,21 +43,21 @@ Then run
 ```bash
 sudo systemctl start ppt20W.timer
 ```
-or reboot to start the service
+or reboot to start the service.
 
 **FAQ**
 
 Q: Will this work with my deck?
 
-A: Idk, my test sweet of one was my LCD deck running SteamOS 3.5.7. If you have that, it probably will. If not, let me know how it goes.
+A: It works on my test suit of one LCD deck, so your milage may very
 
 Q: Will this survive an update?
 
-A: Probably not.
+A: Nope.
 
 Q: Why would I use this over PowerTools?
 
-A: No good reason if your not overclocking the CPU. Maybe you don't like decky for some reason?
+A: No good reason if you’re not overclocking the CPU and trying to set a higher TDP at the same time. Maybe you don't like decky for some reason?
 
 Q: I installed but the slider still says 15w
 
@@ -69,4 +69,4 @@ A: The script will set the TDP, but it wont change what the slider says. I don't
   ```bash
   cat /sys/devices/pci0000:00/0000:00:08.1/0000:04:00.0/hwmon/hwmon5/power2_cap
   ```
-  both should read your current max TDP in microwatts (six extra zeros)
+  both should read your current max TDP in microwatts (six extra zeros).
