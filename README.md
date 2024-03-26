@@ -14,10 +14,9 @@ The service is started automatically at boot and runs every few seconds to check
 
 The main reason I made this was that PowerTools, while an awesome plugin, has a deal-breaking bug for me. It limits the CPU clock speed to 3.5GHz max. This is no good for people like me who want to overclock the deck CPU. So the solution is to just not install PowerTools. However, that means no TDP control over 15w. Hence, this service. Basic, automatic TDP control while having a higher than stock CPU clock speed.
 
+**Is there a better way?**
 
-**What the heck, why the garbage workaround!?**
-
-Yea, yea, I hear you Linux warrior, I know there are better, simpler, and more graceful ways than my service that runs a script every few seconds. My Linux expertise isn't top notch, so if you have a better way, please do share.
+Definitely. This is just the quickest way I could think of.
 
 **Installing**
 
