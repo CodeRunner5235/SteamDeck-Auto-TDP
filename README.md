@@ -1,3 +1,7 @@
+#No Longer Needed
+The lastes releases of SteamOS make this hacky fix unnecessary
+
+
 # SteamDeck Auto TDP
 
 **What is it?**
