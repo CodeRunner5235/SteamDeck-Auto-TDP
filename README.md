@@ -1,5 +1,9 @@
 # SteamDeck Auto TDP
 
+**This is now unnecessary**
+
+SteamOS and decky updates have rendered this work around pointless. Just do your updates and everthing should work. 
+
 **What is it?**
 
 A service that allows the TDP to be set higher than 15w automatically while preserving functionality of the existing TDP control slider in the quick access menu **ON LCD DECKS**. I don't know if the OLED uses different files to control the TDP. You can try, but I don't know what will happen, and don’t recommend it.
