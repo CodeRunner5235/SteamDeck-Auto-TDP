@@ -4,6 +4,10 @@ The lastes releases of SteamOS make this hacky fix unnecessary
 
 # SteamDeck Auto TDP
 
+**This is now unnecessary**
+
+SteamOS and decky updates have rendered this work around pointless. Just do your updates and everthing should work. 
+
 **What is it?**
 
 A service that allows the TDP to be set higher than 15w automatically while preserving functionality of the existing TDP control slider in the quick access menu **ON LCD DECKS**. I don't know if the OLED uses different files to control the TDP. You can try, but I don't know what will happen, and don’t recommend it.
@@ -71,10 +75,10 @@ Q: I installed but the slider still says 15w
 
 A: The script will set the TDP, but it wont change what the slider says. I don't know how to make it do that. You can check the current max TDP with
   ```bash
-  cat /sys/devices/pci0000:00/0000:00:08.1/0000:04:00.0/hwmon/hwmon5/power1_cap
+  cat /sys/class/hwmon/hwmon6/power1_cap
   ```
   and
   ```bash
-  cat /sys/devices/pci0000:00/0000:00:08.1/0000:04:00.0/hwmon/hwmon5/power2_cap
+  cat /sys/class/hwmon/hwmon6/power2_cap
   ```
   both should read your current max TDP in microwatts (six extra zeros).
